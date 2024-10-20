@@ -40,7 +40,7 @@ public class App
         login.click();
         Thread.sleep(2000);
         try {
-            WebElement errorMessage = driver.findElement(By.xpath("//div[contains(@class, '_9ay7')]"));
+            WebElement errorMessage = driver.findElement(By.className("_9ay7"));
             System.out.println("Error Message: " + errorMessage.getText());
         } catch (Exception e) {
             System.out.println("Error message not found or login successful.");
