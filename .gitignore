@@ -1,0 +1,19 @@
+.settings
+# Maven target folder
+/target/
+/bin/
+/.metadata/
+
+# Ignore binary files
+*.class
+*.jar
+*.war
+
+# Eclipse or IntelliJ IDEA specific files (optional, depending on the IDE you use)
+*.iml
+.idea/
+.classpath
+.project
+
+# Logs
+*.log
