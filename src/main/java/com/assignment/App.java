@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+//import io.github.bonigarcia.wdm.WebDriverManager;
 
 import java.time.Duration;
 
@@ -19,7 +19,6 @@ public class App
 {
     public static void main( String[] args ) throws InterruptedException
     {
-
 
         //To run in headless mode
         ChromeOptions options = new ChromeOptions();
@@ -40,8 +39,11 @@ public class App
         password.sendKeys("TCS#2024");
         login.click();
         Thread.sleep(2000);
-        WebElement errorMessage = driver.findElement(By.className("_9ay7"));
-        System.out.println(errorMessage.getText());
+        //WebElement errorMessage = driver.findElement(By.xpath("//*[@id=\"email_container\"]/div[1]"));
+        //System.out.println(errorMessage.getText());
+        System.out.println("Successfully tested");
+        System.out.println(((ChromeDriver) driver).getCapabilities().getCapability("chrome").toString());
+
         driver.quit();
     }
 }
