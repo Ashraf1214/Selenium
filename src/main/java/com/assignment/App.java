@@ -39,10 +39,14 @@ public class App
         password.sendKeys("TCS#2024");
         login.click();
         Thread.sleep(2000);
-        //WebElement errorMessage = driver.findElement(By.xpath("//*[@id=\"email_container\"]/div[1]"));
-        //System.out.println(errorMessage.getText());
-        System.out.println("Successfully tested");
-        System.out.println(((ChromeDriver) driver).getCapabilities().getCapability("chrome").toString());
+        try {
+            WebElement errorMessage = driver.findElement(By.xpath("//div[contains(@class, '_9ay7')]"));
+            System.out.println("Error Message: " + errorMessage.getText());
+        } catch (Exception e) {
+            System.out.println("Error message not found or login successful.");
+        }
+        
+        System.out.println("The chrome versions used here is "+((ChromeDriver) driver).getCapabilities().getCapability("chrome").toString());
 
         driver.quit();
     }
