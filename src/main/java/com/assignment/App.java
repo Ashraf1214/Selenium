@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 //import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -19,9 +20,12 @@ public class App
     public static void main( String[] args ) throws InterruptedException
     {
 
-        //WebDriver driver = new EdgeDriver();
-        WebDriver driver = new ChromeDriver();
-        
+
+        //To run in headless mode
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless");
+        WebDriver driver = new ChromeDriver(options);
+        //WebDriver driver = new EdgeDriver(options);
         driver.get("https://www.facebook.com/");
         
         driver.getTitle();
