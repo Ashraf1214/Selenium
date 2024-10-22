@@ -1,7 +1,7 @@
 package com.assignment;
 
 import org.apache.commons.io.FileUtils;
-import org.junit.Test;
+//import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -13,13 +13,9 @@ import java.io.IOException;
 import java.io.File;
 import java.time.Duration;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
-	@Test
+	
     public static void main( String[] args ) throws InterruptedException, IOException
     {
 
